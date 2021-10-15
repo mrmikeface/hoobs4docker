@@ -8,6 +8,4 @@ ENV PORT 80
 COPY hoobs.sh /hoobs.sh
 VOLUME /hoobs
 USER root
-CMD ["/lib/systemd/systemd"]
-#ENTRYPOINT ["/usr/bin/hbs", "--container", "install", "-p", "$PORT"]
 ENTRYPOINT ["/hoobs.sh"]
