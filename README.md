@@ -18,6 +18,15 @@ docker run -d --name hoobs \
   mikeknowles/hoobs:latest
 ```
 
+For building:
+
+```
+docker buildx build \
+  --platform linux/arm/v7 \
+  --output "type=docker,name=hoobs:armv7" \
+  -t mikeknowles/hoobs:latest .
+```
+
 Docs for cli can be found here https://support.hoobs.org/docs
 
 Docker hub: https://hub.docker.com/repository/docker/mikeknowles/hoobs
